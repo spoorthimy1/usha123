@@ -1,0 +1,44 @@
+package com.final1;
+import org.Springframework.org.bean.factory.BeanFactory;
+import org.Springframework.org.bean.factory.xml.XmlBeanFactory;
+import org.Springframework.org.core.io.ClassPathResource;
+import org.Springframework.org.core.io.Resource;
+public class Test{
+	Resource resource=new ClassPathResource(app.xml);
+	BeanFactory factory=new XmlBeanFactory(resource);
+	Student student=(Student)Factory.getBean(studentBean);
+	student.displayInof();
+}
+}
+
+
+
+
+package com.final1;
+        public class Student{
+		private String name;
+		public String getname() {
+		     return name;
+		}
+	    public void setname(String name) {
+		     this.name=name;
+		}
+	    public void DisplayInfo() {
+		     System.out.println("hello:"+name);
+	    }
+	}
+
+
+
+<?xml version="1.0" encoding="UTF-8"?>
+<beans
+xmlns="http://www.springframework.org/schema/beans"
+xmlns:xsi="http://www.w3.org/2001/Xmlscema-instance"
+xmlns:p="http://www.springframework.org/schema/p"
+xsi:schemaLocation="http://www.springframework.org/schema/beans
+            http://www.springframework.org/schema)beans/spring-beans-3.0.xsd">
+<bean id="studentbean"class="com.Firstspring.Student">
+<property name="name"value="everyone"></property>
+</bean>
+</beans>
+
